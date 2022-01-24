@@ -14,11 +14,11 @@ struct CalcutaroBrain {
     mutating func calculateBMI (height: Float, weight: Float){
         let bmiValue = weight / (height * height)
         if bmiValue < 18.5{
-            bmi = BMI(value: bmiValue, advice: "Eat more pies", color: UIColor.blue)
+            bmi = BMI(value: bmiValue, advice: "Eat more!", color: UIColor.systemTeal)
         } else if bmiValue < 24.9{
-            bmi = BMI(value: bmiValue, advice: "Fit as fiddle!", color: UIColor.green)
+            bmi = BMI(value: bmiValue, advice: "you are in good shape!", color: UIColor.systemGreen)
         } else{
-            bmi = BMI(value: bmiValue, advice: "You're fat like a Cartman!", color: UIColor.red)
+            bmi = BMI(value: bmiValue, advice: "You're fat like a Cartman!", color: UIColor.systemPink)
         }
     }
     func getBMIvalue()->String{
@@ -26,7 +26,7 @@ struct CalcutaroBrain {
         return bmiValue
     }
     func getAdvice()->String{
-        let advice = bmi?.advice ?? "has no advice for you"
+        let advice = bmi?.advice ?? "Has no advice for you"
         return advice
     }
     func getColor()->UIColor{
